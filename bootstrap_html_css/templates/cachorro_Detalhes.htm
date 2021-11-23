@@ -1,0 +1,228 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="{$projectPath}">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-view" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="r-topbar-page">
+        <DIV data-menu-width="compact" class="r-topheader" data-resize-name="topbar" data-body-align="center">
+        </div>
+        <DIV data-body-align="center" data-body-width="standard" class="r-body" data-resize-top="topbar">
+          <DIV class="r-top">
+            {BEGIN top_block}
+              <DIV class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="topbar" {$form_top} data-pageid="{$pageid}" data-v-width="6" data-v-margin="0">
+                <DIV class="row">
+                  <DIV data-cellId="top_c1" data-pageid="{$pageid}" {$cell_top_c1} class="r-ori-vert col-md-12">
+                  </div>
+                </div>
+              </div>
+            {END top_block}
+          </div>
+          <DIV class="r-content">
+            <DIV class="r-data-block" data-body-width="standard">
+              {BEGIN above-grid_block}
+                <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="topbar" {$form_above-grid} data-pageid="{$pageid}" data-v-width="6" data-v-margin="0">
+                  <DIV class="row">
+                    <DIV data-cellId="above-grid_c1" data-pageid="{$pageid}" {$cell_above-grid_c1} class="r-ori-vert col-md-12">
+                      <h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >
+                        {$pagetitlelabel cachorro Detalhes}
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              {END above-grid_block}
+              <DIV class="r-grid">
+                {BEGIN grid_block}
+                  <TABLE data-body-align="center" data-location="grid" id="form_grid_{$pageid}" data-makeup="topbar" {$form_grid} data-pageid="{$pageid}" class="r-edit-form" cellpadding="0" cellspacing="0" {$grid_hiddenattr} data-form-width="3" data-v-width="6">
+                    <tbody>
+                      <tr {$row_grid_0} >
+                        {BEGIN cellblock_grid_c3}
+                          <TD {$cell_grid_c3} class="r-ori-vert" data-cellId="grid_c3" data-pageid="{$pageid}" data-v-cell="2">
+                            <DIV edit-form-cell class="clearfix">
+                              {BEGIN image_db_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_image_db} r-vertical-field" data-fieldname="image_db" data-signal-error-for="image_db{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="image_db" data-fieldname="image_db">
+                                  <DIV class="col-md-12">
+                                    <LABEL class for="{$labelfor_image_db}">
+                                      {BEGIN image_db_label}
+                                        {$label cachorro image_db}
+                                      {END image_db_label}
+                                    </label>
+                                    <DIV class>
+                                      {$image_db_value}
+                                    </div>
+                                  </div>
+                                </div>
+                              {END image_db_fieldblock}
+                              {BEGIN nomec_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_nomec} r-vertical-field" data-fieldname="nomec" data-signal-error-for="nomec{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="nomec" data-fieldname="nomec">
+                                  <DIV class="col-md-12">
+                                    <LABEL class for="{$labelfor_nomec}">
+                                      {BEGIN nomec_label}
+                                        {$label cachorro nomec}
+                                      {END nomec_label}
+                                    </label>
+                                    <DIV class>
+                                      {$nomec_value}
+                                    </div>
+                                  </div>
+                                </div>
+                              {END nomec_fieldblock}
+                          </td>
+                        {END cellblock_grid_c3}
+                        {BEGIN cellblock_grid_c}
+                          <TD {$cell_grid_c} class="r-ori-vert" data-cellId="grid_c" data-pageid="{$pageid}" data-v-cell="2">
+                            <DIV edit-form-cell class="clearfix">
+                              {BEGIN racac_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_racac} r-vertical-field" data-fieldname="racac" data-signal-error-for="racac{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="racac" data-fieldname="racac">
+                                  <DIV class="col-md-12">
+                                    <LABEL class for="{$labelfor_racac}">
+                                      {BEGIN racac_label}
+                                        {$label cachorro racac}
+                                      {END racac_label}
+                                    </label>
+                                    <DIV class>
+                                      {$racac_value}
+                                    </div>
+                                  </div>
+                                </div>
+                              {END racac_fieldblock}
+                              {BEGIN sexoc_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_sexoc} r-vertical-field" data-fieldname="sexoc" data-signal-error-for="sexoc{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="sexoc" data-fieldname="sexoc">
+                                  <DIV class="col-md-12">
+                                    <LABEL class for="{$labelfor_sexoc}">
+                                      {BEGIN sexoc_label}
+                                        {$label cachorro sexoc}
+                                      {END sexoc_label}
+                                    </label>
+                                    <DIV class>
+                                      {$sexoc_value}
+                                    </div>
+                                  </div>
+                                </div>
+                              {END sexoc_fieldblock}
+                              {BEGIN idadec_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_idadec} r-vertical-field" data-fieldname="idadec" data-signal-error-for="idadec{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="idadec" data-fieldname="idadec">
+                                  <DIV class="col-md-12">
+                                    <LABEL class for="{$labelfor_idadec}">
+                                      {BEGIN idadec_label}
+                                        {$label cachorro idadec}
+                                      {END idadec_label}
+                                    </label>
+                                    <DIV class>
+                                      {$idadec_value}
+                                    </div>
+                                  </div>
+                                </div>
+                              {END idadec_fieldblock}
+                              {BEGIN corc_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_corc} r-vertical-field" data-fieldname="corc" data-signal-error-for="corc{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="corc" data-fieldname="corc">
+                                  <DIV class="col-md-12">
+                                    <LABEL class for="{$labelfor_corc}">
+                                      {BEGIN corc_label}
+                                        {$label cachorro corc}
+                                      {END corc_label}
+                                    </label>
+                                    <DIV class>
+                                      {$corc_value}
+                                    </div>
+                                  </div>
+                                </div>
+                              {END corc_fieldblock}
+                          </td>
+                        {END cellblock_grid_c}
+                        {BEGIN cellblock_grid_c4}
+                          <TD {$cell_grid_c4} class="r-ori-vert" data-single data-cellId="grid_c4" data-pageid="{$pageid}" data-v-cell="2">
+                            <DIV edit-form-cell class="clearfix">
+                              {BEGIN textoc_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_textoc} r-vertical-field" data-fieldname="textoc" data-signal-error-for="textoc{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="textoc" data-fieldname="textoc">
+                                  <DIV class="col-md-12">
+                                    <LABEL class for="{$labelfor_textoc}">
+                                      {BEGIN textoc_label}
+                                        {$label cachorro textoc}
+                                      {END textoc_label}
+                                    </label>
+                                    <DIV class>
+                                      {$textoc_value}
+                                    </div>
+                                  </div>
+                                </div>
+                              {END textoc_fieldblock}
+                          </td>
+                        {END cellblock_grid_c4}
+                      </tr>
+                    </tbody>
+                  </table>
+                {END grid_block}
+              </div>
+					  <DIV class="row">
+                    <DIV data-cellId="below-grid_c2" data-pageid="{$pageid}" {$cell_below-grid_c2} class="r-align-center r-ori-vert col-md-12">
+                        <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+    				    <A type="button" title class="btn btn-default" href="index.html#contact">
+         			    Adote Agora
+     					</a>
+						</span>
+						</div>
+              {BEGIN below-grid_block}
+                <DIV class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="topbar" {$form_below-grid} data-pageid="{$pageid}" data-v-width="6" data-v-margin="0">
+                  <DIV class="row">
+                    <DIV data-cellId="below-grid_c1" data-pageid="{$pageid}" {$cell_below-grid_c1} class="r-align-center col-md-12"></br>
+                      <span data-itemtype="prev" data-itemid="prev" {$item_prev} data-pageid="{$pageid}" data-small data-button-item>
+                        <A type="button" title class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}>
+                          <SPAN class="glyphicon glyphicon-menu-left">
+                          </span>
+                        </a>
+                      </span>
+                      <span data-itemtype="next" data-itemid="next" {$item_next} data-pageid="{$pageid}" data-small data-button-item>
+                        <A type="button" title class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}>
+                          <SPAN class="glyphicon glyphicon-menu-right">
+                          </span>
+                        </a>
+                      </span>
+                    </div>
+					  </div>
+                  <DIV class="row">
+                    <DIV data-cellId="below-grid_c2" data-pageid="{$pageid}" {$cell_below-grid_c2} class="r-align-center r-ori-vert col-md-12">
+                      {BEGIN back_button}
+                        <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+                          <A type="button" title class="btn btn-default" {$backbutton_attrs}>
+                            Voltar à Lista
+                          </a>
+                        </span>
+                      {END back_button}
+                    </div>
+                  </div>
+                </div>
+              {END below-grid_block}
+            </div>
+          </div>
+        </div>
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

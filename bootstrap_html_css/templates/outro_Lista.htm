@@ -1,0 +1,182 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="{$projectPath}">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-list" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="r-topbar-page">
+        <DIV data-menu-width="full" class="r-topheader" data-resize-name="topbar" data-body-align="left">
+        </div>
+        <DIV data-body-align="left" data-body-width="full" class="r-body" data-resize-top="topbar">
+          <DIV class="r-top">
+            {BEGIN top_block}
+              <DIV class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="topbar" {$form_top} data-pageid="{$pageid}">
+                <DIV class="row">
+                  <DIV data-cellId="top_c1" data-pageid="{$pageid}" {$cell_top_c1} class="r-ori-vert col-md-12">
+                  </div>
+                </div>
+              </div>
+            {END top_block}
+          </div>
+          <DIV class="r-content">
+            <DIV class="r-left" {$blockattr_left} {$form_left}>
+              {BEGIN left_block}
+                <TABLE class="r-fluid r-form" data-location="left" id="form_left_{$pageid}" data-makeup="topbar" {$form_left} data-pageid="{$pageid}">
+                  <tbody>
+                    <tr {$row_left_0} >
+                      <TD class="r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              {END left_block}
+            </div>
+            <DIV class="r-data-block" data-body-width="full">
+              {BEGIN above-grid_block}
+                <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="topbar" {$form_above-grid} data-pageid="{$pageid}">
+                  <DIV class="row">
+                    <DIV data-cellId="above-grid_c2" data-pageid="{$pageid}" {$cell_above-grid_c2} class="r-align-right col-md-12">
+                      {BEGIN firstAboveGridCell}
+                        <span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+                          {$mlp_push}
+                          {$mlparam first var first_shown}
+                          {$mlparam last var last_shown}
+                          {$mlparam total var records_found}
+                          {mlang_message DISPLAYING}
+                          {$mlp_pop}
+                        </span>
+                        <span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+                          {$recsPerPage}
+                        </span>
+                      {END firstAboveGridCell}
+                    </div>
+                  </div>
+                </div>
+              {END above-grid_block}
+              <DIV class="r-grid">
+                {BEGIN grid_tabs}
+                  <UL class="nav nav-tabs bsgrid_tabs">
+                    {$grid_tabs_content}
+                  </ul>
+                {END grid_tabs}
+                {BEGIN message_block}
+                  <DIV data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>
+                    {$message}
+                  </div>
+                {END message_block}
+                {BEGIN grid_block}
+                  <DIV data-vcolumns=5 class="r-fluid r-grid-vertical bs-grid-vertical" data-location="grid" id="form_grid_{$pageid}" data-makeup="topbar" {$form_grid} data-pageid="{$pageid}">
+                    {BEGIN grid_row}
+                      {BEGIN grid_record}
+                        {BEGIN grid_vrecord}
+                          <DIV class="r-record-body {$rowclass}" {$rowattrs} {$rowstyle} data-record-id="{$recId}">
+                            <DIV class="panel panel-default" {$recordattrs}>
+                              {BEGIN grid_recordheader}
+                                <DIV class="panel-heading">
+                                  <TABLE data-width="1" class="header-table">
+                                    <tr>
+                                      <TD class="r-ori-vert" data-cellId="grid_cell_top" data-pageid="{$pageid}" data-record-id="{$recId}">
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              {END grid_recordheader}
+                              <DIV class="panel-body">
+                                <table data-width="1" >
+                                  <tr>
+                                    <TD class="r-align-left r-ori-vert {$nomeo_class}" data-cellId="grid_cell_label" data-pageid="{$pageid}" data-record-id="{$recId}">
+                                      {BEGIN image_db_fieldcolumn}
+                                        <span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="image_db" data-fieldname="image_db" data-default-width >
+                                          {$image_db_value}
+                                        </span>
+                                      {END image_db_fieldcolumn}
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <TD class="r-align-left" data-cellId="grid_cell_label1" data-pageid="{$pageid}" data-record-id="{$recId}">
+                                      {BEGIN nomeo_fieldheadercolumn}
+                                        <span data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nomeo" data-fieldname="nomeo">
+                                          {$label outro nomeo}
+                                        </span>
+                                      {END nomeo_fieldheadercolumn}
+                                      {BEGIN nomeo_fieldcolumn}
+                                        <span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nomeo" data-fieldname="nomeo" data-default-width >
+                                          {$nomeo_value}
+                                        </span>
+                                      {END nomeo_fieldcolumn}
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <TD class="r-align-left r-ori-vert {$image_db_class}" data-cellId="grid_cell_label2" data-pageid="{$pageid}" data-record-id="{$recId}">
+                                      {BEGIN view_column}
+                                        {BEGIN view_link}
+                                          <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+                                            <A type="button" title class="btn btn-default" href="outro_view.php?{$editlink}">
+                           					  Mais Detalhes
+                          					  </a>
+                                          </span>
+                                        {END view_link}
+                                      {END view_column}
+                                    </td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        {END grid_vrecord}
+                      {END grid_record}
+                    {END grid_row}
+                  </div>
+                {END grid_block}
+              </div>
+              {BEGIN below-grid_block}
+                <DIV class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="topbar" {$form_below-grid} data-pageid="{$pageid}">
+                  <DIV class="row">
+                    <DIV data-cellId="below-grid_c1" data-pageid="{$pageid}" {$cell_below-grid_c1} class="r-align-center r-ori-vert col-md-12">
+                      {BEGIN pagination_block}
+                        <span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+                          {$pagination}
+                        </span>
+                      {END pagination_block}
+                    </div>
+                  </div>
+                </div>
+              {END below-grid_block}
+				<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+                          <A type="button" title class="btn btn-default" href="index.html#portfolio">
+                            Voltar à Página Inicial
+                          </a>
+                        </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

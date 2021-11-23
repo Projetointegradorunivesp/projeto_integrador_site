@@ -1,0 +1,83 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="{$projectPath}">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-menu" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="r-topbar-page">
+        <DIV data-menu-width="full" class="r-topheader" data-resize-name="topbar" data-body-align="left">
+        </div>
+        <DIV data-body-align="left" data-body-width="standard" class="r-body" data-resize-top="topbar">
+          <DIV class="r-top">
+          </div>
+          <DIV class="r-content">
+            <DIV class="r-data-block" data-body-width="standard">
+              {BEGIN above-grid_block}
+                <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="topbar" {$form_above-grid} data-pageid="{$pageid}">
+                  <DIV class="row">
+                    <DIV data-cellId="above-grid_c1" data-pageid="{$pageid}" {$cell_above-grid_c1} class="r-ori-vert col-md-12">
+                      {BEGIN firstAboveGridCell}
+                      {END firstAboveGridCell}
+                    </div>
+                  </div>
+                </div>
+              {END above-grid_block}
+              <DIV class="r-grid">
+                {BEGIN grid_block}
+                  <TABLE class="r-fluid r-form" data-location="grid" id="form_grid_{$pageid}" data-makeup="topbar" {$form_grid} data-pageid="{$pageid}">
+                    <tbody>
+                      <tr {$row_grid_0} >
+                        <td 
+	
+			 
+	data-cellId="grid_c1" data-pageid="{$pageid}">
+                          <DIV class="r-welcome-align">
+                            <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="20">
+                              <DIV class="bs-welcome-header">
+                                <a id="itemlink" href="cachorro_list.php"  >
+                                  Cachorros
+                                </a>
+                              </div>
+                              <DIV class="bs-welcome-content">
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                {END grid_block}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>
